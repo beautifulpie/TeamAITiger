@@ -49,7 +49,7 @@ git clone https://github.com/beautifulpie/TeamAITiger
 cd AITiger
 pip install -r requirements.txt
 ```
-requirements.txt 예시
+- requirements.txt 예시
 ```nginx
 langchain
 openai
