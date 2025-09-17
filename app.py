@@ -128,7 +128,7 @@ with gr.Blocks() as demo:
 
     status = gr.Textbox(label="상태 메시지")
 
-    query = gr.Textbox(label="질문 입력", placeholder="예: 비가 4mm 오는 상황에서, 10 km 외부 지역에 지속성 작용제가 포탄으로 투하시 대처해야 하는가?")
+    query = gr.Textbox(label="질문 입력", placeholder="예: 비가 4mm 오는 상황에서, 10 km 외부 지역에 지속성 작용제가 포탄으로 투하시 어떻게 대처해야 하는가?")
     answer = gr.Markdown()
 
     upload_btn.click(build_knowledge_base, inputs=pdf_input, outputs=status)

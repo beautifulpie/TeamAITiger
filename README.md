@@ -2,16 +2,10 @@
 ## 설명
 본 repository는 **"2025 육군 빅데이터 분석 경연 대회"** 출품을 위한 repository로써 인공지능 부관 서비스 플랫폼의 코드를 공유하기 위한 저장소입니다.
 
-# 🪖 Military Manual RAG System  
-**LangChain 기반 군사교범 분석 시스템**
-
-이 프로젝트는 군사 교범 및 작전 지침과 같은 방대한 군사 지식을 LangChain 기반 파이프라인으로 전처리하고,  
-벡터 데이터베이스를 활용한 Retrieval-Augmented Generation(RAG) 기법으로 분석·검색·질의응답 기능을 제공하는 **AI 부관 시스템**의 MVP 구현체입니다.
-
 ---
 
 # 🪖 Military Manual RAG System  
-**LangChain 기반 군사교범 분석 시스템**
+### **LangChain 기반 군사교범 분석 시스템**
 
 이 프로젝트는 군사 교범 및 작전 지침과 같은 방대한 군사 지식을 LangChain 기반 파이프라인으로 전처리하고,  
 벡터 데이터베이스를 활용한 Retrieval-Augmented Generation(RAG) 기법으로 분석·검색·질의응답 기능을 제공하는 **AI 부관 시스템**의 MVP 구현체입니다.
@@ -57,7 +51,6 @@ pip install -r requirements.txt
 ```
 requirements.txt 예시
 ```nginx
-코드 복사
 langchain
 openai
 faiss-cpu
@@ -65,8 +58,8 @@ pypdf
 gradio
 ```
 2. 환경 변수 설정
-.env 파일을 생성하여 API Key 등록:
 ```ini
+.env 파일을 생성하여 API Key 등록:
 OPENAI_API_KEY=sk-xxxxxx
 ```
 3. 로컬 서버 실행
@@ -74,15 +67,11 @@ OPENAI_API_KEY=sk-xxxxxx
 python app.py
 ```
 💻 사용 방법
-```
-교범 PDF 파일을 업로드합니다.
+1. 교범 PDF 파일을 업로드합니다.
+2. 시스템이 문서를 분할하고 벡터DB에 저장합니다.
+3. 질의 입력창에 질문(예: "예: 비가 4mm 오는 상황에서, 10 km 외부 지역에 지속성 작용제가 포탄으로 투하시 어떻게 대처해야 하는가?")을 입력합니다.
+4. RAG 시스템이 관련 문서 Chunk를 근거와 함께 반환합니다.
 
-시스템이 문서를 분할하고 벡터DB에 저장합니다.
-
-질의 입력창에 질문(예: "평지에서 대기 중인 전차의 배치 간격은 얼마인가?")을 입력합니다.
-
-RAG 시스템이 관련 문서 Chunk를 근거와 함께 반환합니다.
-```
 📌 향후 확장 계획
 ```
 군수·정비·인사 등 처부별 멀티에이전트 도구 연동
